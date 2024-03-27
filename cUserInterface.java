@@ -1,4 +1,4 @@
-// UI
+// UI for CRUDS
 
 import java.util.Scanner;
 import java.io.*;
@@ -53,6 +53,17 @@ public class cUserInterface
         }
         return fieldsCount;
 	}
+
+	void getMenu() throws IOException
+	{
+		File fpMenu = new File("Menu.config");
+		read = new Scanner(fpMenu);
+		while (read.hasNext())
+		{
+			System.out.println(read.nextLine().trim());
+		}
+	}
+
 
 	void getFieldNames() throws Exception
 	{
