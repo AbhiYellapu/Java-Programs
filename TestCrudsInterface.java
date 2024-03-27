@@ -1,4 +1,4 @@
-// Testing database interface
+// Testing CRUDS interface
 
 import java.util.Scanner;
 import java.io.*;
@@ -22,16 +22,6 @@ class TestCrudsInterface
 		getDatabaseConfig();
 		oRecord = (iCruds) Class.forName(className).getDeclaredConstructor(String.class, String.class).newInstance(dbName, tableName);
 		menu();
-	}
-
-	static void getMenu() throws IOException
-	{
-		File fpMenu = new File("Menu.config");
-		read = new Scanner(fpMenu);
-		while (read.hasNext())
-		{
-			System.out.println(read.nextLine().trim());
-		}
 	}
 
 	static void getDatabaseConfig() throws IOException
@@ -60,9 +50,9 @@ class TestCrudsInterface
 	{
 		while (true)
 		{
-			getMenu();
 			read = new Scanner(System.in);
 			cUserInterface record = new cUserInterface();
+			record.getMenu();
 			System.out.print("Enter your option: ");
 			int option = Integer.parseInt(read.nextLine());
 
