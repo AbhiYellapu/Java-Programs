@@ -61,7 +61,6 @@ class TestCrudsInterface
 		while (true)
 		{
 			getMenu();
-			// System.out.println("\n----------Ak Mart-----------\n0. Exit\n1. To add record\n2. To show all items\n-----------------------------");
 			read = new Scanner(System.in);
 			cUserInterface record = new cUserInterface();
 			System.out.print("Enter your option: ");
