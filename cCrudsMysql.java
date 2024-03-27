@@ -10,12 +10,6 @@ public class cCrudsMysql implements iCruds
     String tableName;
     int columnCount;
 
-    public cCrudsMysql() throws SQLException 
-    {
-        tableName = "Item";
-        conn = DriverManager.getConnection("jdbc:mysql://138.68.140.83:3306/dbAbhi", "Abhi", "Abhi@123");
-    }
-
     public cCrudsMysql(String pDatabaseName, String pTableName) throws SQLException 
     {
         tableName = pTableName;
