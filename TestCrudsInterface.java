@@ -59,8 +59,7 @@ class TestCrudsInterface
 			switch (option)
 			{
 				case 1: record.readFieldValues();
-						oRecord.addRecord(record);
-						record.showInsertedMessage(1);
+						record.showInsertedMessage(oRecord.addRecord(record));
 						break;
 				case 2: record.show(oRecord.fetchAll());
 						break;
